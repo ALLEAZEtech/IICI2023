@@ -475,7 +475,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
 }
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float:left;
+  width: 14.28%;
+  padding: 5px;
+}
 
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 #intro:before {
   content: "";
   background: rgba(6, 12, 34, 0.8);
@@ -632,6 +644,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+.logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
 @-webkit-keyframes pulsate-btn {
   0% {
     -webkit-transform: scale(0.6, 0.6);
